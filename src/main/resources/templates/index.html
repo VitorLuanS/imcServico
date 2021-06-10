@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Índice de Massa Corpórea</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="css/formStyle.css" type="text/css"/>
+      
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </head>
+    <body>
+        <section >
+            <form method="get">
+                <h1>Índice de Massa Corpórea!</h1>
+                <div class="flex">
+                    <p style="width: 20%">Altura:</p>
+                    <input class="input-custom" placeholder="0.00" value="altura" step="0.01" name="altura" type="number"/> 
+                </div>
+                <div class="flex">
+                    <p style="width: 20%">Massa</p>
+                    <input class="input-custom" placeholder="0.00" value="" step="0.01" name="massa" type="number"/> 
+                </div>
+                <div class="w-100 flex center margin-20-top">
+                    <button class="waves-effect waves-light btn" type="submit">Calcular</button>
+                </div>
+                <div>
+                    <h5>Imc: <span th:text="${imc}"></span> </h5>
+                    <h5>Classificação: <span th:text="${classificacao}"></span> </h5>
+                    <h5>Risco para a Saúde: <span th:text="${risco}"></span> </h5>
+
+                </div>
+            </form>
+        </section>
+    </body>
+</html>
